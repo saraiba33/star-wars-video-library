@@ -8,3 +8,11 @@ body {
     font-family: 'Star Jedi', arial;
     background-image: url('stars.jpg');
 }
+
+.spinner {
+    width: 300px;
+}
+
+.hidden {
+    display: none;
+}

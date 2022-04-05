@@ -1,4 +1,8 @@
 const url = "https://swapi.dev/api/films";
+spinner.classList.add("hidden")
+
+console.log(spinner)
+
 const starWarsIdMap = {
     1: 4,
     2: 5,
@@ -31,10 +35,9 @@ fetch(url)
             .then(response => response.json()))
         return Promise.all(movieFetches)
             .then(parsedResponse => {
-                //console.log(parsedResponse)
+                
                 parsedResponse.forEach(parsedResponse => {
                     createDiv(parsedResponse)
-                    console.log(parsedResponse)
                 })
             })
     })

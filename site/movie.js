@@ -1,5 +1,6 @@
 const url = new URL(window.location)
 const queryString = new URLSearchParams(url.search)
+const spinner = document.querySelector(".spinner")
 const starWarsIdMap = {
     1: 4,
     2: 5,
@@ -16,9 +17,9 @@ fetch(`https://swapi.dev/api/films/${newId}`)
     .then(response => {
         return response.json()
     }).then(parsedResponse => {
-        console.log(parsedResponse)
         createDiv(parsedResponse)
         createCharacterList(parsedResponse)
+        spinner.classList.add("hidden")
     })
 
 function createCharacterList(parsedObject) {
