@@ -1,9 +1,10 @@
 const url = "https://swapi.dev/api/films";
 
+
 function createDiv(parsedObject) {
     const div = document.createElement("div")
     div.classList.add("movie-listing")
-    div.innerHTML = `<a href=> ${parsedObject.title}</a>
+    div.innerHTML = `<a href="movie.html?films=${parsedObject.title}">${parsedObject.title}</a>
     <time>${parsedObject.release_date}</time>
     `
     const ul = document.querySelector("ul")
@@ -20,9 +21,10 @@ fetch(url)
             .then(response => response.json()))
         return Promise.all(movieFetches)
             .then(parsedResponse => {
-                console.log(parsedResponse)
+                //console.log(parsedResponse)
                 parsedResponse.forEach(parsedResponse => {
                     createDiv(parsedResponse)
+                    console.log(parsedResponse)
                 })
             })
     })
