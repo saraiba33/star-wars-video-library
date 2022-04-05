@@ -42,7 +42,7 @@ function createDiv(parsedObject) {
     const div = document.createElement("div")
     div.classList.add("movie")
     div.innerHTML = `<a href=> ${parsedObject.title}</a>
-    <time>${parsedObject.release_date}</time>
+    <time>${dateConverter(parsedObject.release_date)}</time>
     <img src="${newId}.JPG" alt=${parsedObject.title}>
     <h2>Opening Crawl</h2>
         <div class=crawl>${parsedObject.opening_crawl}</div>
@@ -51,5 +51,10 @@ function createDiv(parsedObject) {
     `
     const main = document.querySelector("main")
     main.append(div)
+}
 
+function dateConverter(date) {
+    const [year, month, day] = date.split("-");
+    const result = [month, day, year].join("/");
+    return result;
 }

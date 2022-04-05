@@ -25,7 +25,8 @@ body {
 
 .movies img {
     width: 400px;
-    margin: 20px
+    margin: 20px;
+    margin-top: 36px;
 }
 
 main {
@@ -39,6 +40,7 @@ main {
 
 h1 {
     text-align: center;
+    font-size: 60px;
 }
 
 h1 a {
@@ -49,10 +51,13 @@ h1 a {
 .movie img {
     width: 500px;
     display: block;
+    justify-self: center;
 }
 
 .movie {
     text-align: center;
+    justify-content: center;
+    display: block;
 }
 
 .characters {
