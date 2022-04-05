@@ -4,7 +4,7 @@ const url = "https://swapi.dev/api/films";
 function createDiv(parsedObject) {
     const div = document.createElement("div")
     div.classList.add("movie-listing")
-    div.innerHTML = `<a href="movie.html?films=${parsedObject.title}">${parsedObject.title}</a>
+    div.innerHTML = `<a href="movie.html?films=${parsedObject.episode_id}">${parsedObject.title}</a>
     <time>${parsedObject.release_date}</time>
     `
     const ul = document.querySelector("ul")
