@@ -42,7 +42,7 @@ function createDiv(parsedObject) {
     div.classList.add("movie")
     div.innerHTML = `<a href=> ${parsedObject.title}</a>
     <time>${parsedObject.release_date}</time>
-    <img src=xx alt=xx>
+    <img src="${newId}.JPG" alt=${parsedObject.title}>
     <h2>Opening Crawl</h2>
         <div class=crawl>${parsedObject.opening_crawl}</div>
     <h2> Characters</h2 >

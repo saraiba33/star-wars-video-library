@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=News+Cycle:wght@700&display=swap');
+* {
+    font-family: 'News Cycle', sans-serif;
+    color: yellow;
+}
+
+body {
+    font-family: 'Star Jedi', arial;
+    background-image: url('stars.jpg');
+}
