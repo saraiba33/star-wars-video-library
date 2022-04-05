@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=News+Cycle:wght@700&display=swap');
+
 * {
     font-family: 'News Cycle', sans-serif;
     color: yellow;
@@ -15,4 +16,45 @@ body {
 
 .hidden {
     display: none;
+}
+
+.movies {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.movies img {
+    width: 400px;
+    margin: 20px
+}
+
+main {
+    text-align: center;
+}
+
+.movie-listing {
+    display: grid;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+h1 a {
+    text-align: center;
+    text-decoration: none;
+}
+
+.movie img {
+    width: 500px;
+    display: block;
+}
+
+.movie {
+    text-align: center;
+}
+
+.characters {
+    list-style: none;
 }

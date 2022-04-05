@@ -1,7 +1,5 @@
 const url = "https://swapi.dev/api/films";
-spinner.classList.add("hidden")
-
-console.log(spinner)
+const spinner = document.querySelector(".spinner")
 
 const starWarsIdMap = {
     1: 4,
@@ -17,9 +15,10 @@ function createDiv(parsedObject) {
     const div = document.createElement("div")
     div.classList.add("movie-listing")
     const newId = starWarsIdMap[parsedObject.episode_id]
-    div.innerHTML = `<a href="movie.html?films=${parsedObject.episode_id}">${parsedObject.title}</a>
-    <time>${parsedObject.release_date}</time>
-    <img src="${newId}.JPG" alt=${parsedObject.title}>
+    div.innerHTML = `
+<img src="${newId}.JPG" alt=${parsedObject.title}>
+    <a href="movie.html?films=${parsedObject.episode_id}">${parsedObject.title}</a>
+    <time>${dateConverter(parsedObject.release_date)}</time>
     `
     const ul = document.querySelector("ul")
     ul.append(div)
@@ -35,9 +34,15 @@ fetch(url)
             .then(response => response.json()))
         return Promise.all(movieFetches)
             .then(parsedResponse => {
-                
+                spinner.classList.add("hidden")
                 parsedResponse.forEach(parsedResponse => {
                     createDiv(parsedResponse)
                 })
             })
     })
+
+function dateConverter(date) {
+    const [year, month, day] = date.split("-");
+    const result = [month, day, year].join("/");
+    return result;
+}
