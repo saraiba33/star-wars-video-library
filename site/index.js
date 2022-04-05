@@ -6,6 +6,7 @@ function createDiv(parsedObject) {
     div.classList.add("movie-listing")
     div.innerHTML = `<a href="movie.html?films=${parsedObject.episode_id}">${parsedObject.title}</a>
     <time>${parsedObject.release_date}</time>
+    <img src=xx alt=xx>
     `
     const ul = document.querySelector("ul")
     ul.append(div)

@@ -37,15 +37,16 @@ function createCharacterList(parsedObject) {
     console.log(characterUrls)
 }
 
-
-
 function createDiv(parsedObject) {
     const div = document.createElement("div")
     div.classList.add("movie")
     div.innerHTML = `<a href=> ${parsedObject.title}</a>
     <time>${parsedObject.release_date}</time>
-    <h2>Characters</h2>
-    <ul class="characters"></ul>
+    <img src=xx alt=xx>
+    <h2>Opening Crawl</h2>
+        <div class=crawl>${parsedObject.opening_crawl}</div>
+    <h2> Characters</h2 >
+        <ul class="characters"></ul>
     `
     const main = document.querySelector("main")
     main.append(div)
